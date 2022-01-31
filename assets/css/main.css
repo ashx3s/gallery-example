@@ -1,24 +1,74 @@
+/* Layout */
 main {
   margin: 0 auto;
-  max-width: 1000px;
+  min-width: 300px;
+  max-width: 1100px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   align-items: end;
   justify-items: center;
 }
 
-header,
-footer {
-  margin: 2rem 0 4rem 0;
-  text-align: center;
+/* ************* */
+/* Gallery Items */
+/* ************* */
+
+/* gallery item container */
+figure {
+  display: grid;
+  height: 100%;
+  min-width: 250px;
+}
+
+/* 2 row spanning image */
+.fig-portrait {
+  grid-row: span 2;
+  height: 100%;
+}
+
+/* full width image */
+.fig-landscape {
+  grid-column: 1 / -1;
+}
+/* gallery item image */
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  grid-row: 1;
+  grid-column: 1;
+}
+
+/* gallery item text layout */
+figcaption {
+  grid-row: 1;
+  grid-column: 1;
+
+  justify-self: end;
+  align-self: end;
+
+  text-align: end;
+
+  color: rgb(169, 219, 235);
+  margin: 0 8px 4px 0;
+}
+
+/* *********************** */
+/* Non Gallery UI Elements */
+/* *********************** */
+header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0 4rem 0;
+  width: 100%;
+  text-align: center;
 }
 
 footer {
@@ -30,29 +80,4 @@ footer {
   padding: 2rem;
   background-color: black;
   color: whitesmoke;
-}
-/* Gallery Items */
-
-figure {
-  display: grid;
-  height: 100%;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  grid-row: 1;
-  grid-column: 1;
-}
-figcaption {
-  grid-row: 1;
-  grid-column: 1;
-  justify-self: end;
-  align-self: end;
-  text-align: end;
-  color: white;
-  margin-right: 5px;
-}
-.fig-portrait {
-  grid-row: span 2;
-  height: 100%;
 }
