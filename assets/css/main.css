@@ -1,13 +1,33 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  align-items: end;
+  width: 65vw;
 }
+header {
+  margin: 2rem 0 4rem 0;
+  text-align: center;
+}
+footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: black;
+  color: whitesmoke;
+}
 /* Gallery Items */
 figure {
   display: flex;
   flex-direction: column;
-  max-width: 50rem;
 }
 figcaption {
   display: none;
@@ -16,4 +36,12 @@ figcaption {
 img {
   width: 100%;
   height: auto;
+}
+
+.fig-portrait {
+  grid-row-start: span 2;
+}
+.fig-landscape {
+  grid-column-start: span 3;
+  max-width: 1000px;
 }
