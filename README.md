@@ -1,6 +1,11 @@
 # gallery-example
 
-A vanilla html and css image gallery page example
+An image gallery that uses css grid and flexbox.
+
+- Design Objectives
+  - Create a complex layout that does not use media queries
+  - Use grid in the gallery items to display captions ontop of the images
+- TODO: Add 3 more images to generate 3 even columns
 
 ## Attributions
 

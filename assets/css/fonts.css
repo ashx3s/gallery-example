@@ -6,8 +6,9 @@ p {
 
 h1 {
   font-size: clamp(2rem, 10vw, 4rem);
-  font-weight: 600;
+  font-weight: 700;
 }
+
 figcaption,
 p {
   font-size: 2rem;
