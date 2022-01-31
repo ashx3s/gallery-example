@@ -6,3 +6,7 @@ figcaption,
 a {
   font-family: 'Nunito Sans', sans-serif;
 }
+
+figcaption {
+  font-size: 2rem;
+}

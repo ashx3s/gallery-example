@@ -1,19 +1,26 @@
-.layout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+main {
+  margin: 0 auto;
+  max-width: 1000px;
 }
-.gallery-container {
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   align-items: end;
-  width: 65vw;
+  justify-items: center;
 }
-header {
+
+header,
+footer {
   margin: 2rem 0 4rem 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 footer {
   display: flex;
   text-align: center;
@@ -25,23 +32,27 @@ footer {
   color: whitesmoke;
 }
 /* Gallery Items */
+
 figure {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  grid-row: 1;
+  grid-column: 1;
 }
 figcaption {
-  display: none;
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: end;
+  align-self: end;
+  text-align: end;
+  color: white;
+  margin-right: 5px;
 }
-
-img {
-  width: 100%;
-  height: auto;
-}
-
 .fig-portrait {
-  grid-row-start: span 2;
-}
-.fig-landscape {
-  grid-column-start: span 3;
-  max-width: 1000px;
+  grid-row: span 2;
+  height: 100%;
 }
