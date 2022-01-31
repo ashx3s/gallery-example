@@ -1,0 +1,19 @@
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+/* Gallery Items */
+figure {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+}
+figcaption {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
